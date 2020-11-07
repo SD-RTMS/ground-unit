@@ -38,7 +38,33 @@ class DummyInterface(Interface):
         return True
 
 class SerialInterface(Interface):
-    pass
+    def __init__(self):
+        # TODO replace SERIAL PORT with the correct port
+        self.serial = serial.Serial("SERIAL PORT", 115200, timeout=1.0)
+        self._dataWaiting = False
+
+    def open(self):
+        return True
+
+    def close(self):
+        self.serial.close()
+
+    def dataWaiting(self):
+        return self._dataWaiting
+
+    def getBufferedData(self):
+        self._dataWaiting = False
+        return self.buffer
+
+    def waitData(self):
+        try:
+            self.buffer = self.serial.read()
+            print('Received data')
+            self._dataWaiting = True
+            return True
+        except:
+            print(sys.exc_info())
+            return False 
 
 ## Basic TCP client
 class TCPInterface(Interface):
@@ -84,4 +110,4 @@ class TCPInterface(Interface):
             return False
 
 def defaultInterface() -> Interface:
-    return TCPInterface()
+    return SerialInterface()

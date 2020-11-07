@@ -58,10 +58,11 @@ class SerialInterface(Interface):
 
     def waitData(self):
         try:
-            self.buffer = self.serial.read()
-            print('Received data')
-            self._dataWaiting = True
-            return True
+            self.buffer = self.serial.read()  
+            if len(self.buffer) > 0:
+                print('Received data')
+                self._dataWaiting = True
+                return True
         except:
             print(sys.exc_info())
             return False 

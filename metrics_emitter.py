@@ -30,6 +30,9 @@ class Emitter:
         for subsystem in subsystems:
             for descriptor in subsystems[subsystem].DESCRIPTOR.fields:
                 value = getattr(subsystems[subsystem], descriptor.name)
+                # pushgateway doesn't accept booleans
+                if isinstance(value, bool):
+                    value = int(value)
                 #print ("%s: %s" % (subsystem + "_" + descriptor.name, value))
 
                 response = requests.post('http://' + PUSHGATEWAY_HOST + ':9091/metrics/job/{j}/instance/{i}'.format(j=self.job_name, i=self.instance_name), data='{k} {v}\n'.format(k=(subsystem + "_" + descriptor.name + delayStr), v=value))

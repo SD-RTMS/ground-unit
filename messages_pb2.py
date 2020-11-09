@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='downlink_proto',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0emessages.proto\x12\x0e\x64ownlink_proto\"o\n\x0e\x44igitalMetrics\x12\x11\n\tdigital_0\x18\x01 \x01(\x08\x12\x11\n\tdigital_1\x18\x02 \x01(\x08\x12\x11\n\tdigital_2\x18\x03 \x01(\x08\x12\x11\n\tdigital_3\x18\x04 \x01(\x08\x12\x11\n\tdigital_4\x18\x05 \x01(\x08\"W\n\rAnalogMetrics\x12\x10\n\x08\x61nalog_0\x18\x01 \x01(\x02\x12\x10\n\x08\x61nalog_1\x18\x02 \x01(\x02\x12\x10\n\x08\x61nalog_2\x18\x03 \x01(\x02\x12\x10\n\x08\x61nalog_3\x18\x04 \x01(\x02\"c\n\tTimestamp\x12\r\n\x05month\x18\x01 \x01(\x05\x12\x0b\n\x03\x64\x61y\x18\x02 \x01(\x05\x12\x0c\n\x04year\x18\x03 \x01(\x05\x12\x0c\n\x04hour\x18\x04 \x01(\x05\x12\x0e\n\x06minute\x18\x05 \x01(\x05\x12\x0e\n\x06second\x18\x06 \x01(\x05\"j\n\x12PowerSupplyMetrics\x12\x16\n\x0etemperature_v0\x18\x01 \x01(\x02\x12\x16\n\x0etemperature_v1\x18\x02 \x01(\x02\x12\x11\n\tlevel_3v3\x18\x03 \x01(\x02\x12\x11\n\tlevel_5v0\x18\x04 \x01(\x02\"\xf6\x01\n\nIMUMetrics\x12\x0f\n\x07\x65uler_x\x18\x01 \x01(\x02\x12\x0f\n\x07\x65uler_y\x18\x02 \x01(\x02\x12\x0f\n\x07\x65uler_z\x18\x03 \x01(\x02\x12\x0e\n\x06quat_a\x18\x04 \x01(\x02\x12\x0e\n\x06quat_b\x18\x05 \x01(\x02\x12\x0e\n\x06quat_c\x18\x06 \x01(\x02\x12\x0f\n\x07omega_x\x18\x07 \x01(\x02\x12\x0f\n\x07omega_y\x18\x08 \x01(\x02\x12\x0f\n\x07omega_z\x18\t \x01(\x02\x12\x13\n\x0bmagnitude_x\x18\n \x01(\x02\x12\x13\n\x0bmagnitude_y\x18\x0b \x01(\x02\x12\x13\n\x0bmagnitude_z\x18\x0c \x01(\x02\x12\x13\n\x0btemperature\x18\r \x01(\x02\"]\n\x14SpaceComputerMetrics\x12\x15\n\rpower_voltage\x18\x01 \x01(\x02\x12\x15\n\rpower_current\x18\x02 \x01(\x02\x12\x17\n\x0ftemperature_die\x18\x03 \x01(\x02\"\xc4\x02\n\rSystemMetrics\x12\'\n\x04time\x18\x01 \x01(\x0b\x32\x19.downlink_proto.Timestamp\x12\x0f\n\x07\x64\x65layed\x18\x02 \x01(\x08\x12\x38\n\x0cpower_supply\x18\x03 \x01(\x0b\x32\".downlink_proto.PowerSupplyMetrics\x12\x36\n\x08\x63omputer\x18\x04 \x01(\x0b\x32$.downlink_proto.SpaceComputerMetrics\x12\'\n\x03imu\x18\x05 \x01(\x0b\x32\x1a.downlink_proto.IMUMetrics\x12/\n\x07\x64igital\x18\x06 \x01(\x0b\x32\x1e.downlink_proto.DigitalMetrics\x12-\n\x06\x61nalog\x18\x07 \x01(\x0b\x32\x1d.downlink_proto.AnalogMetricsb\x06proto3')
+  serialized_pb=_b('\n\x0emessages.proto\x12\x0e\x64ownlink_proto\"o\n\x0e\x44igitalMetrics\x12\x11\n\tdigital_0\x18\x01 \x01(\x08\x12\x11\n\tdigital_1\x18\x02 \x01(\x08\x12\x11\n\tdigital_2\x18\x03 \x01(\x08\x12\x11\n\tdigital_3\x18\x04 \x01(\x08\x12\x11\n\tdigital_4\x18\x05 \x01(\x08\"W\n\rAnalogMetrics\x12\x10\n\x08\x61nalog_0\x18\x01 \x01(\x02\x12\x10\n\x08\x61nalog_1\x18\x02 \x01(\x02\x12\x10\n\x08\x61nalog_2\x18\x03 \x01(\x02\x12\x10\n\x08\x61nalog_3\x18\x04 \x01(\x02\"c\n\tTimestamp\x12\r\n\x05month\x18\x01 \x01(\x05\x12\x0b\n\x03\x64\x61y\x18\x02 \x01(\x05\x12\x0c\n\x04year\x18\x03 \x01(\x05\x12\x0c\n\x04hour\x18\x04 \x01(\x05\x12\x0e\n\x06minute\x18\x05 \x01(\x05\x12\x0e\n\x06second\x18\x06 \x01(\x05\"j\n\x12PowerSupplyMetrics\x12\x16\n\x0etemperature_v0\x18\x01 \x01(\x02\x12\x16\n\x0etemperature_v1\x18\x02 \x01(\x02\x12\x11\n\tlevel_3v3\x18\x03 \x01(\x02\x12\x11\n\tlevel_5v0\x18\x04 \x01(\x02\"\xcb\x02\n\nIMUMetrics\x12\x0f\n\x07\x65uler_x\x18\x01 \x01(\x02\x12\x0f\n\x07\x65uler_y\x18\x02 \x01(\x02\x12\x0f\n\x07\x65uler_z\x18\x03 \x01(\x02\x12\x0e\n\x06quat_a\x18\x04 \x01(\x02\x12\x0e\n\x06quat_b\x18\x05 \x01(\x02\x12\x0e\n\x06quat_c\x18\x06 \x01(\x02\x12\x0e\n\x06quat_d\x18\x07 \x01(\x02\x12\x0f\n\x07omega_x\x18\x08 \x01(\x02\x12\x0f\n\x07omega_y\x18\t \x01(\x02\x12\x0f\n\x07omega_z\x18\n \x01(\x02\x12\x15\n\rlinearAccel_x\x18\x0b \x01(\x02\x12\x15\n\rlinearAccel_y\x18\x0c \x01(\x02\x12\x15\n\rlinearAccel_z\x18\r \x01(\x02\x12\x13\n\x0bmagnitude_x\x18\x0e \x01(\x02\x12\x13\n\x0bmagnitude_y\x18\x0f \x01(\x02\x12\x13\n\x0bmagnitude_z\x18\x10 \x01(\x02\x12\x13\n\x0btemperature\x18\x11 \x01(\x02\"]\n\x14SpaceComputerMetrics\x12\x15\n\rpower_voltage\x18\x01 \x01(\x02\x12\x15\n\rpower_current\x18\x02 \x01(\x02\x12\x17\n\x0ftemperature_die\x18\x03 \x01(\x02\"\xc4\x02\n\rSystemMetrics\x12\'\n\x04time\x18\x01 \x01(\x0b\x32\x19.downlink_proto.Timestamp\x12\x0f\n\x07\x64\x65layed\x18\x02 \x01(\x08\x12\x38\n\x0cpower_supply\x18\x03 \x01(\x0b\x32\".downlink_proto.PowerSupplyMetrics\x12\x36\n\x08\x63omputer\x18\x04 \x01(\x0b\x32$.downlink_proto.SpaceComputerMetrics\x12\'\n\x03imu\x18\x05 \x01(\x0b\x32\x1a.downlink_proto.IMUMetrics\x12/\n\x07\x64igital\x18\x06 \x01(\x0b\x32\x1e.downlink_proto.DigitalMetrics\x12-\n\x06\x61nalog\x18\x07 \x01(\x0b\x32\x1d.downlink_proto.AnalogMetricsb\x06proto3')
 )
 
 
@@ -304,50 +304,78 @@ _IMUMETRICS = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='omega_x', full_name='downlink_proto.IMUMetrics.omega_x', index=6,
+      name='quat_d', full_name='downlink_proto.IMUMetrics.quat_d', index=6,
       number=7, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='omega_y', full_name='downlink_proto.IMUMetrics.omega_y', index=7,
+      name='omega_x', full_name='downlink_proto.IMUMetrics.omega_x', index=7,
       number=8, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='omega_z', full_name='downlink_proto.IMUMetrics.omega_z', index=8,
+      name='omega_y', full_name='downlink_proto.IMUMetrics.omega_y', index=8,
       number=9, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='magnitude_x', full_name='downlink_proto.IMUMetrics.magnitude_x', index=9,
+      name='omega_z', full_name='downlink_proto.IMUMetrics.omega_z', index=9,
       number=10, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='magnitude_y', full_name='downlink_proto.IMUMetrics.magnitude_y', index=10,
+      name='linearAccel_x', full_name='downlink_proto.IMUMetrics.linearAccel_x', index=10,
       number=11, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='magnitude_z', full_name='downlink_proto.IMUMetrics.magnitude_z', index=11,
+      name='linearAccel_y', full_name='downlink_proto.IMUMetrics.linearAccel_y', index=11,
       number=12, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='temperature', full_name='downlink_proto.IMUMetrics.temperature', index=12,
+      name='linearAccel_z', full_name='downlink_proto.IMUMetrics.linearAccel_z', index=12,
       number=13, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='magnitude_x', full_name='downlink_proto.IMUMetrics.magnitude_x', index=13,
+      number=14, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='magnitude_y', full_name='downlink_proto.IMUMetrics.magnitude_y', index=14,
+      number=15, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='magnitude_z', full_name='downlink_proto.IMUMetrics.magnitude_z', index=15,
+      number=16, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='temperature', full_name='downlink_proto.IMUMetrics.temperature', index=16,
+      number=17, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -365,7 +393,7 @@ _IMUMETRICS = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=446,
-  serialized_end=692,
+  serialized_end=777,
 )
 
 
@@ -409,8 +437,8 @@ _SPACECOMPUTERMETRICS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=694,
-  serialized_end=787,
+  serialized_start=779,
+  serialized_end=872,
 )
 
 
@@ -482,8 +510,8 @@ _SYSTEMMETRICS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=790,
-  serialized_end=1114,
+  serialized_start=875,
+  serialized_end=1199,
 )
 
 _SYSTEMMETRICS.fields_by_name['time'].message_type = _TIMESTAMP

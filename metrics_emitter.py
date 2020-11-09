@@ -1,6 +1,9 @@
 import messages_pb2
 import requests
 
+#TODO
+PUSHGATEWAY_HOST = 'localhost'
+
 # Emits metrics to Prometheus PushGateway
 class Emitter:
     job_name = 'rtms'
@@ -29,5 +32,5 @@ class Emitter:
                 value = getattr(subsystems[subsystem], descriptor.name)
                 #print ("%s: %s" % (subsystem + "_" + descriptor.name, value))
 
-                response = requests.post('http://precision:9091/metrics/job/{j}/instance/{i}'.format(j=self.job_name, i=self.instance_name), data='{k} {v}\n'.format(k=(subsystem + "_" + descriptor.name + delayStr), v=value))
+                response = requests.post('http://' + PUSHGATEWAY_HOST + ':9091/metrics/job/{j}/instance/{i}'.format(j=self.job_name, i=self.instance_name), data='{k} {v}\n'.format(k=(subsystem + "_" + descriptor.name + delayStr), v=value))
                 #print(response.status_code)

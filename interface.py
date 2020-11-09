@@ -114,5 +114,5 @@ class TCPInterface(Interface):
             return False
 
 def defaultInterface() -> Interface:
-    #return SerialInterface()
-    return TCPInterface()
+    return SerialInterface()
+    #return TCPInterface()

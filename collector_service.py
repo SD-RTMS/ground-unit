@@ -19,7 +19,7 @@ def poll():
         if msg.valid():
             metrics = msg.get()
             print(metrics)
-            #emitter.emit(metrics)
+            emitter.emit(metrics)
 
 if __name__ == '__main__':
     ## Attempt to open the interface

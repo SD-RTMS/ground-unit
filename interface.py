@@ -63,6 +63,7 @@ class SerialInterface(Interface):
                 print('Received data')
                 self._dataWaiting = True
                 return True
+            return False
         except:
             print(sys.exc_info())
             return False 
@@ -103,12 +104,15 @@ class TCPInterface(Interface):
     def waitData(self):
         try:
             self.buffer = self.sock.recv(2048)
-            print('Received data')
-            self._dataWaiting = True
-            return True
+            if len(self.buffer) > 0:
+                print('Received data')
+                self._dataWaiting = True
+                return True
+            return False
         except:
             print(sys.exc_info())
             return False
 
 def defaultInterface() -> Interface:
-    return SerialInterface()
+    #return SerialInterface()
+    return TCPInterface()

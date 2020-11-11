@@ -35,5 +35,12 @@ class Emitter:
                     value = int(value)
                 #print ("%s: %s" % (subsystem + "_" + descriptor.name, value))
 
-                response = requests.post('http://' + PUSHGATEWAY_HOST + ':9091/metrics/job/{j}/instance/{i}'.format(j=self.job_name, i=self.instance_name), data='{k} {v}\n'.format(k=(subsystem + "_" + descriptor.name + delayStr), v=value))
-                #print(response.status_code)
+                self.emit((subsystem + "_" + descriptor.name + delayStr), value)
+
+    def emit(self, key, value):
+        response = requests.post('http://' + PUSHGATEWAY_HOST + ':9091/metrics/job/{j}/instance/{i}'.format(j=self.job_name, i=self.instance_name), data='{k} {v}\n'.format(k=key, v=value))
+        #print(response.status_code)
+
+_emitter = Emitter()
+def emitter():
+    return _emitter

@@ -1,9 +1,9 @@
 import interface
-from metrics_emitter import Emitter
+from metrics_emitter import Emitter, emitter
 from message_deserializer import ReceivedMessage
+import collector_metrics as cm
 
 interface = interface.defaultInterface()
-emitter = Emitter()
 
 ## Polling loop
 def poll():
@@ -19,11 +19,20 @@ def poll():
         if msg.valid():
             metrics = msg.get()
             print(metrics)
-            emitter.emit(metrics)
+            emitter().emit(metrics)
 
 if __name__ == '__main__':
+    cm.initMetricsZero()
+
     ## Attempt to open the interface
-    if not interface.open():
+    interfaceOpened = False
+    try:
+        interfaceOpened = interface.open()
+    except:
+        pass
+
+    if not interfaceOpened:
+        cm.notifyInterfaceError()
         exit(1)
 
     try:

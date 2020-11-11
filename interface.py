@@ -39,12 +39,16 @@ class DummyInterface(Interface):
 
 class SerialInterface(Interface):
     def __init__(self):
-        # TODO replace SERIAL PORT with the correct port
-        self.serial = serial.Serial("SERIAL PORT", 115200, timeout=1.0)
+        self.serial = None
         self._dataWaiting = False
 
     def open(self):
-        return True
+        # TODO replace SERIAL PORT with the correct port
+        try:
+            self.serial = serial.Serial("SERIAL PORT", 115200, timeout=1.0)
+            return True
+        except:
+            return False
 
     def close(self):
         self.serial.close()

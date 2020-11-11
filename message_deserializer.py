@@ -8,6 +8,7 @@ class ReceivedMessage:
 
         self._calculatedChecksum = self.calculateChecksum()
         self._proto = None
+        self._parseError = False
 
         print('Checksum ' + str(self._checksum))
         print('Calculated ' + str(self._calculatedChecksum))
@@ -16,11 +17,15 @@ class ReceivedMessage:
         if self.valid():
             print('Valid')
             self._proto = messages_pb2.SystemMetrics()
-            self._proto.ParseFromString(self._data)
+            try:
+                self._proto.ParseFromString(self._data)
+            except:
+                print('Deserialization error')
+                self._parseError = True
+                
 
     def valid(self) -> bool:
-        #return self._checksum == self._calculatedChecksum
-        return True
+        return (self._checksum == self._calculatedChecksum) and not self._parseError
 
     def checksum(self) -> int:
         return self._checksum

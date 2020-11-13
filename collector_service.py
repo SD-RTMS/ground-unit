@@ -19,7 +19,8 @@ def poll():
         if msg.valid():
             metrics = msg.get()
             print(metrics)
-            emitter().emit(metrics)
+            if not emitter().emit(metrics):
+                cm.notifyEmitError()
 
 if __name__ == '__main__':
     cm.initMetricsZero()
@@ -33,6 +34,7 @@ if __name__ == '__main__':
 
     if not interfaceOpened:
         cm.notifyInterfaceError()
+        cm.emitAllMetrics()
         exit(1)
 
     try:
@@ -41,4 +43,5 @@ if __name__ == '__main__':
     except KeyboardInterrupt:
         print('Exiting...')
         interface.close()
+        cm.emitAllMetrics()
         exit(0)
